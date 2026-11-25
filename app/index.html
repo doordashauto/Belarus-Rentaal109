@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Недвижимость Беларуси — продажа и аренда квартир и коммерческой недвижимости</title>
+<meta name="description" content="Агентство «Недвижимость Беларуси»: продажа и аренда квартир, домов и коммерческой недвижимости в Минске, Минском районе и областных центрах. Лицензия Минюста № 02240/452.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Недвижимость Беларуси — агентство недвижимости">
+<meta property="og:description" content="Квартиры в Минске и областных центрах. Проверка документов и сопровождение сделки до ключей.">
+<meta property="og:locale" content="ru_BY">
+<meta name="theme-color" content="#F9F5EC">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/unbounded-cyrillic-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script src="/theme.js"></script>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Недвижимость Беларуси — на главную">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" class="l-bg"/><path d="M9 30V17l11-8 11 8v13" fill="none" stroke="#F3EFE6" stroke-width="2.6" stroke-linejoin="round"/><rect x="16.5" y="21" width="7" height="9" rx="1.5" fill="#9FB6F5"/></svg>
+      <span class="logo-t">Недвижимость<br>Беларуси</span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="#catalog" data-deal="sale">Купить</a>
+      <a href="#catalog" data-deal="rent">Снять</a>
+      <a href="#catalog" data-cat="house">Дома</a>
+      <a href="#catalog" data-cat="commercial">Коммерция</a>
+      <a href="#owners">Собственникам</a>
+      <a data-team-link href="#agents">Риелторы</a>
+      <a href="#services">Услуги</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="hdr-right">
+      <a class="hdr-phone" data-site-tel="phone" href="tel:+375296700454">+375 29 670-04-54</a>
+      <a class="icon-btn tg-btn" data-site-link="telegram" href="https://t.me/nedvizhimost_bel" target="_blank" rel="noopener" aria-label="Написать нам в Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.3 18.3 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.8-8c.4-.3-.1-.5-.6-.2L6.2 12.8l-4.6-1.4c-1-.3-1-1 .2-1.5L20.1 3c.9-.3 1.6.2 1.3 1.3Z"/></svg></a>
+      <button class="icon-btn" id="themeBtn" aria-label="Сменить тему оформления">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <button class="icon-btn fav-count" id="favBtn" aria-label="Избранное">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20Z"/></svg>
+        <b id="favNum" hidden>0</b>
+      </button>
+      <button class="icon-btn burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-label="Мобильное меню">
+  <button class="icon-btn" id="mclose" aria-label="Закрыть меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <a class="ml" href="#catalog" data-deal="sale">Купить</a>
+  <a class="ml" href="#catalog" data-deal="rent">Снять</a>
+  <a class="ml" href="#catalog" data-cat="house">Загородные дома</a>
+  <a class="ml" href="#catalog" data-cat="commercial">Коммерческая недвижимость</a>
+  <a class="ml" href="#owners">Сдать или продать</a>
+  <a class="ml" data-team-link href="#agents">Риелторы</a>
+  <a class="ml" href="#services">Услуги и ипотека</a>
+  <a class="ml" href="#faq">Вопросы</a>
+  <a class="ml" href="#contacts">Контакты</a>
+  <a class="btn btn-primary mnav-tg" data-site-link="telegram" href="https://t.me/nedvizhimost_bel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.3 18.3 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.8-8c.4-.3-.1-.5-.6-.2L6.2 12.8l-4.6-1.4c-1-.3-1-1 .2-1.5L20.1 3c.9-.3 1.6.2 1.3 1.3Z"/></svg>Написать в Telegram</a>
+  <a class="btn btn-ghost" data-site-bot data-label="Каталог в Telegram-боте" href="#" target="_blank" rel="noopener" hidden>Каталог в Telegram-боте</a>
+  <a class="btn btn-ghost" data-site-tel="phone" data-prefix="Позвонить: " href="tel:+375296700454">Позвонить: +375 29 670-04-54</a>
+</div>
+
+<main id="top">
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap">
+    <h1 id="heroTitle">Квартира в Беларуси без лишних хлопот</h1>
+    <p class="lead">Продаём и сдаём квартиры, загородные дома, офисы, склады и торговые помещения в Минске, Бресте, Гродно, Гомеле, Витебске и Могилёве. Проверяем документы до просмотра и сопровождаем сделку до передачи ключей.</p>
+
+    <form class="search" id="heroSearch" aria-label="Поиск квартиры">
+      <div class="seg" role="group" aria-label="Тип сделки">
+        <button type="button" data-hdeal="sale" aria-pressed="true">Купить</button>
+        <button type="button" data-hdeal="rent" aria-pressed="false">Снять</button>
+      </div>
+      <div class="field"><label for="hCity">Город</label>
+        <select id="hCity"><option value="">Вся Беларусь</option></select></div>
+      <div class="field"><label for="hRooms">Что ищете</label>
+        <select id="hRooms"><option value="">Любой объект</option><option value="0">Студия</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4 и больше</option><option value="house">Дом, коттедж</option><option value="com">Коммерческая</option></select></div>
+      <div class="field"><label for="hMax">Цена до, $</label>
+        <input id="hMax" inputmode="numeric" placeholder="Любая" autocomplete="off"></div>
+      <div class="field"><label for="hQ">Улица или район</label>
+        <input id="hQ" placeholder="Немига" autocomplete="off"></div>
+      <button class="btn btn-primary" type="submit">Показать квартиры</button>
+    </form>
+    <p class="hero-note" id="heroNote">Сейчас в базе <strong id="statTotal">0</strong> объектов: <strong id="statSale">0</strong> на продажу и <strong id="statRent">0</strong> в аренду.</p>
+  </div>
+  <svg class="skyline" id="skyline" viewBox="0 0 1440 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+</section>
+
+<div class="cities" aria-label="Быстрый выбор города">
+  <div class="wrap" id="cityStrip"></div>
+</div>
+
+<section id="catalog" aria-labelledby="catTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="catTitle">Квартиры, дома и коммерческая недвижимость</h2>
+      <p class="lead">Все объекты проверены: собственник подтверждён, документы на право собственности мы видели лично.</p>
+    </div>
+    <div class="catalog-grid" id="catalogGrid">
+      <aside class="filters" id="filters" aria-label="Фильтры">
+        <div class="row-between">
+          <h3>Фильтры</h3>
+          <button class="icon-btn fclose" id="fclose" aria-label="Закрыть фильтры"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        </div>
+        <div class="seg" role="group" aria-label="Тип сделки">
+          <button type="button" data-deal="all" aria-pressed="true">Все</button>
+          <button type="button" data-deal="sale" aria-pressed="false">Продажа</button>
+          <button type="button" data-deal="rent" aria-pressed="false">Аренда</button>
+        </div>
+        <div class="fgroup"><span class="flabel" id="catLbl">Тип недвижимости</span>
+          <div class="chips" role="group" aria-labelledby="catLbl" id="fCat">
+            <button class="chip" type="button" data-cat="all" aria-pressed="true">Все</button>
+            <button class="chip" type="button" data-cat="apartment" aria-pressed="false">Квартиры</button>
+            <button class="chip" type="button" data-cat="house" aria-pressed="false">Дома</button>
+            <button class="chip" type="button" data-cat="commercial" aria-pressed="false">Коммерция</button>
+          </div></div>
+        <div class="fgroup"><label for="fCity">Город</label>
+          <select id="fCity" class="inp"><option value="">Все города</option></select></div>
+        <div class="fgroup" id="roomsGroup"><span class="flabel" id="roomsLbl">Комнаты</span>
+          <div class="chips" role="group" aria-labelledby="roomsLbl" id="fRooms">
+            <button class="chip" data-r="0" aria-pressed="false">Студия</button>
+            <button class="chip" data-r="1" aria-pressed="false">1</button>
+            <button class="chip" data-r="2" aria-pressed="false">2</button>
+            <button class="chip" data-r="3" aria-pressed="false">3</button>
+            <button class="chip" data-r="4" aria-pressed="false">4+</button>
+          </div></div>
+        <div class="fgroup"><span class="flabel">Цена, $</span>
+          <div class="pair"><input class="inp" id="fMin" inputmode="numeric" placeholder="от" aria-label="Цена от"><input class="inp" id="fMax" inputmode="numeric" placeholder="до" aria-label="Цена до"></div></div>
+        <div class="fgroup"><span class="flabel">Площадь, м²</span>
+          <div class="pair"><input class="inp" id="fAmin" inputmode="numeric" placeholder="от" aria-label="Площадь от"><input class="inp" id="fAmax" inputmode="numeric" placeholder="до" aria-label="Площадь до"></div></div>
+        <div class="fgroup"><label for="fQ">Улица, район, метро</label>
+          <input class="inp" id="fQ" placeholder="Например, Притыцкого"></div>
+        <label class="check"><input type="checkbox" id="fMetro"> Рядом метро (Минск)</label>
+        <label class="check"><input type="checkbox" id="fPets"> Можно с животными</label>
+        <label class="check"><input type="checkbox" id="fFav"> Только избранное</label>
+        <label class="check"><input type="checkbox" id="fAct"> Скрыть снятые с продажи</label>
+        <button class="btn btn-ghost btn-sm" id="fReset" type="button">Сбросить фильтры</button>
+        <button class="btn btn-primary ftoggle" id="fApply" type="button">Показать</button>
+      </aside>
+
+      <div>
+        <div class="toolbar">
+          <div class="count-wrap"><p class="count" id="count" aria-live="polite"></p><button class="btn btn-primary btn-sm" id="showAll" type="button" hidden>Показать все объекты</button></div>
+          <div class="toolbar-r">
+            <button class="btn btn-ghost btn-sm ftoggle" id="fOpen" type="button">Фильтры</button>
+            <label class="sr" for="sort">Сортировка</label>
+            <select id="sort" class="inp sort-select">
+              <option value="new">Сначала новые</option>
+              <option value="pa">Сначала дешевле</option>
+              <option value="pd">Сначала дороже</option>
+              <option value="ad">По площади</option>
+            </select>
+          </div>
+        </div>
+        <div class="cards" id="cards"></div>
+        <div class="more"><button class="btn btn-ghost" id="moreBtn" type="button">Показать ещё</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="scrim" id="scrim"></div>
+
+<section aria-labelledby="howTitle" class="pt0">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="howTitle">Как проходит сделка</h2><p class="lead">От первой заявки до ключей обычно проходит от трёх дней (аренда) до трёх-четырёх недель (покупка).</p></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Заявка и подбор</h3><p>Обсуждаем бюджет, район и сроки. В течение дня присылаем подборку подходящих квартир.</p></div>
+      <div class="step"><div class="n">2</div><h3>Просмотры</h3><p>Показываем квартиры в удобное время, в том числе вечером и по видеосвязи.</p></div>
+      <div class="step"><div class="n">3</div><h3>Проверка документов</h3><p>Запрашиваем выписку из ЕГРНИ, проверяем собственников, обременения и зарегистрированных лиц.</p></div>
+      <div class="step"><div class="n">4</div><h3>Сделка и ключи</h3><p>Готовим договор, сопровождаем расчёты и регистрацию, составляем акт приёма-передачи.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services" aria-labelledby="svcTitle">
+  <div class="wrap svc-grid">
+    <div>
+      <h2 id="svcTitle">Услуги агентства</h2>
+      <p class="lead mt16">Комиссию фиксируем в договоре до начала работы. Без доплат за «срочность» и просмотры.</p>
+      <div class="svc-list">
+        <div class="svc-item"><h3>Продажа квартиры</h3><p>Оценка, фото, реклама на порталах, показы, сделка</p><span class="cost">от 2% стоимости</span></div>
+        <div class="svc-item"><h3>Покупка с сопровождением</h3><p>Подбор, переговоры о цене, проверка и регистрация</p><span class="cost">от 1,5%</span></div>
+        <div class="svc-item"><h3>Сдача в аренду</h3><p>Поиск и проверка арендатора, договор, опись имущества</p><span class="cost">50% месячной оплаты</span></div>
+        <div class="svc-item"><h3>Юридическая проверка</h3><p>Анализ документов и истории квартиры перед сделкой</p><span class="cost">от 450 BYN</span></div>
+        <div class="svc-item"><h3>Коммерческая недвижимость</h3><p>Офисы, склады, торговые помещения и готовый бизнес</p><span class="cost">от 2%</span></div>
+        <div class="svc-item"><h3>Оценка стоимости</h3><p>Анализ рынка по похожим объектам в вашем районе</p><span class="cost">бесплатно</span></div>
+      </div>
+    </div>
+    <div class="calc" aria-labelledby="calcTitle">
+      <h3 id="calcTitle">Ипотечный калькулятор</h3>
+      <p>Предварительный расчёт ежемесячного платежа. Точные условия зависят от банка.</p>
+      <div class="rng"><div class="rng-top"><label for="cPrice">Стоимость квартиры</label><b id="cPriceV"></b></div><input type="range" id="cPrice" min="20000" max="400000" step="1000" value="110000"></div>
+      <div class="rng"><div class="rng-top"><label for="cDown">Первый взнос</label><b id="cDownV"></b></div><input type="range" id="cDown" min="10" max="80" step="1" value="30"></div>
+      <div class="rng"><div class="rng-top"><label for="cYears">Срок кредита</label><b id="cYearsV"></b></div><input type="range" id="cYears" min="3" max="30" step="1" value="20"></div>
+      <div class="rng"><div class="rng-top"><label for="cRate">Ставка, годовых</label><b id="cRateV"></b></div><input type="range" id="cRate" min="4" max="20" step="0.1" value="11"></div>
+      <div class="calc-out" aria-live="polite">
+        <div class="big"><span>Ежемесячный платёж</span><b id="cPay"></b></div>
+        <div><span>Сумма кредита</span><b id="cLoan"></b></div>
+        <div><span>Переплата</span><b id="cOver"></b></div>
+      </div>
+      <p class="fine">Расчёт по аннуитетной схеме, в долларах для наглядности. Кредиты физлицам в Беларуси выдаются в белорусских рублях; пересчёт в BYN по условному курсу <span id="rateNote"></span>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="agents" hidden aria-labelledby="agTitle">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="agTitle">Наши риелторы</h2><p class="lead">У каждого есть аттестат риэлтера и опыт работы в своём городе. Звоните напрямую тому, кто ведёт объект.</p></div>
+    <div class="agents" id="agentList"></div>
+  </div>
+</section>
+
+<section class="owners" id="owners" aria-labelledby="owTitle">
+  <div class="wrap owners-grid">
+    <div>
+      <h2 id="owTitle">Сдайте или продайте квартиру с нами</h2>
+      <p class="lead mt16">Оставьте заявку или <a class="on-dark" data-site-link="telegram" href="https://t.me/nedvizhimost_bel" target="_blank" rel="noopener">напишите нам в Telegram</a> — риелтор свяжется с вами в течение рабочего дня и назовёт рыночную цену по вашему району.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Профессиональная съёмка и описание объекта</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Размещение на крупнейших порталах Беларуси</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Показы без вашего участия по доверенности</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Проверка арендаторов и покупателей</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Договор и регистрация сделки под ключ</span></li>
+      </ul>
+    </div>
+    <form class="form" id="ownerForm" novalidate>
+      <div class="fbody stack14">
+        <h3>Заявка собственника</h3>
+        <div class="seg" role="group" aria-label="Что вы хотите сделать">
+          <button type="button" data-odeal="sale" aria-pressed="true">Продать</button>
+          <button type="button" data-odeal="rent" aria-pressed="false">Сдать</button>
+        </div>
+        <div class="row">
+          <label>Ваше имя<input class="inp" name="name" autocomplete="name" required></label>
+          <label>Телефон<input class="inp" name="phone" type="tel" autocomplete="tel" placeholder="+375 (__) ___-__-__" required></label>
+        </div>
+        <div class="row">
+          <label>Город<select class="inp" name="city" id="oCity"></select></label>
+          <label>Объект<select class="inp" name="rooms"><option>Студия</option><option>1</option><option selected>2</option><option>3</option><option>4 и больше</option><option>Дом, коттедж</option><option>Коммерческое помещение</option></select></label>
+        </div>
+        <label>Адрес или комментарий<textarea class="inp" name="msg" placeholder="Улица, дом, площадь, когда удобно созвониться"></textarea></label>
+        <label class="consent"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных, включая их хранение у хостинг-провайдера за пределами Беларуси, согласно <a href="#" data-policy="privacy">политике конфиденциальности</a></span></label>
+        <p class="err" id="ownerErr" role="alert"></p>
+        <button class="btn btn-primary" type="submit" id="ownerSubmit">Отправить заявку</button>
+      </div>
+      <div class="done" role="status"><h3>Заявка отправлена</h3><p class="mt8">Риелтор перезвонит вам в течение рабочего дня. Номер заявки: <b id="ownerId"></b></p></div>
+    </form>
+  </div>
+</section>
+
+
+<section id="faq" aria-labelledby="faqTitle" class="pt0">
+  <div class="wrap faq-grid">
+    <div><h2 id="faqTitle">Частые вопросы</h2><p class="lead mt16">Не нашли ответ? <a data-site-link="telegram" href="https://t.me/nedvizhimost_bel" target="_blank" rel="noopener">Напишите нам в Telegram</a> или позвоните.</p></div>
+    <div>
+      <details><summary>Сколько стоят услуги агентства?</summary><p>При аренде комиссия составляет 50% месячной оплаты и выплачивается один раз после подписания договора. При покупке и продаже — от 1,5 до 2% стоимости квартиры. Точная сумма фиксируется в договоре на оказание риэлтерских услуг.</p></details>
+      <details><summary>Нужно ли платить за просмотры?</summary><p>Нет. Просмотры бесплатны, оплата производится только по результату — после подписания договора аренды или купли-продажи.</p></details>
+      <details><summary>Как вы проверяете квартиры?</summary><p>Запрашиваем выписку из ЕГРНИ, проверяем правоустанавливающие документы, отсутствие арестов и обременений, состав зарегистрированных лиц и наличие долгов по коммунальным платежам.</p></details>
+      <details><summary>Можно ли купить квартиру удалённо?</summary><p>Да. Мы проводим видеопросмотры, а саму сделку можно оформить по нотариальной доверенности. Риелтор лично присутствует на всех этапах.</p></details>
+      <details><summary>Какие документы нужны для аренды?</summary><p>Паспорт или вид на жительство. Договор аренды мы регистрируем в местном исполкоме или администрации района, как этого требует законодательство.</p></details>
+      <details><summary>Можно ли снять квартиру с животными?</summary><p>Да, такие объекты отмечены в каталоге. Включите фильтр «Можно с животными». Часть собственников просит увеличенный депозит.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacts" aria-labelledby="ctTitle" class="pt0">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="ctTitle">Контакты</h2></div>
+    <div class="contacts-grid">
+      <div class="cbox">
+        <dl>
+          <div><dt>Офис</dt><dd data-site="address">г. Минск, пр-т Машерова, 42</dd></div>
+          <div><dt>Telegram — основной канал связи</dt><dd><a data-site-link="telegram" href="https://t.me/nedvizhimost_bel" target="_blank" rel="noopener">t.me/nedvizhimost_bel</a></dd></div>
+          <div data-bot-row hidden><dt>Каталог в Telegram</dt><dd><a data-site-bot href="#" target="_blank" rel="noopener"></a></dd></div>
+          <div><dt>Телефон</dt><dd><a data-site-tel="phone" href="tel:+375296700454">+375 29 670-04-54</a></dd></div>
+          
+          <div data-optional="email"><dt>Электронная почта</dt><dd><a data-site-mail="email" href="#"></a></dd></div>
+          <div data-optional="hours"><dt>Часы работы</dt><dd data-site="hours"></dd></div>
+        </dl>
+        <div class="obj-acts"><a class="btn btn-primary" data-site-link="telegram" href="https://t.me/nedvizhimost_bel" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.3 18.3 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.8-8c.4-.3-.1-.5-.6-.2L6.2 12.8l-4.6-1.4c-1-.3-1-1 .2-1.5L20.1 3c.9-.3 1.6.2 1.3 1.3Z"/></svg>Написать в Telegram</a><a class="btn btn-ghost" data-site-tel="phone" data-label="Позвонить" href="tel:+375296700454">Позвонить</a></div>
+      </div>
+      <div class="map" role="img" aria-label="Схема проезда к офису на проспекте Машерова, 42">
+        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+          <rect class="m-bg" width="640" height="400"/>
+          <g class="m-blk">
+            <rect x="20" y="20" width="150" height="110" rx="6"/><rect x="190" y="20" width="120" height="70" rx="6"/><rect x="330" y="20" width="140" height="90" rx="6"/><rect x="490" y="20" width="130" height="130" rx="6"/>
+            <rect x="20" y="250" width="120" height="130" rx="6"/><rect x="160" y="290" width="160" height="90" rx="6"/><rect x="430" y="280" width="190" height="100" rx="6"/>
+            <rect x="330" y="130" width="140" height="60" rx="6"/>
+          </g>
+          <path d="M-10 210 C 90 170, 170 240, 260 215 S 400 150, 470 225 S 600 260, 660 230" fill="none" stroke="#7FA6D9" stroke-width="22" stroke-linecap="round" opacity=".75"/>
+          <path class="m-road" d="M0 150 H640" stroke-width="14"/>
+          <path class="m-road" d="M320 0 V400" stroke-width="16"/>
+          <path class="m-road" d="M0 270 L640 250" stroke-width="10"/>
+          <text class="m-txt" x="40" y="143">пр-т Машерова</text>
+          <g transform="translate(372 150)">
+            <path class="m-pin" d="M0 -46 C -18 -46 -28 -32 -28 -19 C -28 0 0 22 0 22 C 0 22 28 0 28 -19 C 28 -32 18 -46 0 -46Z"/>
+            <circle class="m-dot" cy="-20" r="9"/>
+          </g>
+          <rect class="m-tag" x="406" y="98" width="150" height="40" rx="10"/>
+          <text class="m-tag-txt" x="418" y="123">пр-т Машерова, 42</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#34416A"/><path d="M9 30V17l11-8 11 8v13" fill="none" stroke="#F3EFE6" stroke-width="2.6" stroke-linejoin="round"/><rect x="16.5" y="21" width="7" height="9" rx="1.5" fill="#9FB6F5"/></svg><span class="logo-t">Недвижимость<br>Беларуси</span></a>
+        <p>Агентство недвижимости «Загородный дом и Недвижимость бел». Квартиры, дома и коммерческая недвижимость в Минске и по всей Беларуси.</p>
+      </div>
+      <div><h4>Клиентам</h4><ul><li><a href="#catalog" data-deal="sale">Купить квартиру</a></li><li><a href="#catalog" data-deal="rent">Снять квартиру</a></li><li><a href="#catalog" data-cat="house">Загородные дома</a></li><li><a href="#catalog" data-cat="commercial">Коммерческая недвижимость</a></li><li><a href="#owners">Сдать или продать</a></li><li><a href="#services">Ипотечный калькулятор</a></li></ul></div>
+      <div><h4>Агентство</h4><ul><li><a data-team-link href="#agents">Риелторы</a></li><li><a href="#services">Услуги и цены</a></li><li><a href="#faq">Вопросы и ответы</a></li><li><a href="#contacts">Контакты</a></li><li><a data-site-link="telegram" href="https://t.me/nedvizhimost_bel" target="_blank" rel="noopener">Наш Telegram-канал</a></li><li data-bot-row hidden><a data-site-bot data-label="Каталог в Telegram-боте" href="#" target="_blank" rel="noopener">Каталог в Telegram-боте</a></li></ul></div>
+      <div><h4>Документы</h4><ul><li><button class="lnk" data-policy="privacy">Политика конфиденциальности</button></li><li><button class="lnk" data-policy="terms">Пользовательское соглашение</button></li><li><button class="lnk" data-policy="cookies">Использование cookie</button></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year">2026</span> <span data-site="legalName">«Загородный дом и Недвижимость бел»</span>. Все права защищены. Копирование материалов сайта, включая фотографии объектов, без письменного разрешения запрещено.</span>
+      <span>УНП <span data-site="unp">193630299</span>. Лицензия <span data-site="license">№ 02240/452 от 10.11.2022, выдана Министерством юстиции Республики Беларусь</span>. Страховое свидетельство <span data-site="insurance">серия БР № 0003134</span>. Адрес: <span data-site="address">г. Минск, пр-т Машерова, 42</span>.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="objModal" role="dialog" aria-modal="true" aria-labelledby="objTitle" hidden>
+  <div class="modal-bg" data-close></div>
+  <div class="modal-panel">
+    <button class="icon-btn modal-close" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div id="objBody"></div>
+  </div>
+</div>
+
+<div class="modal" id="polModal" role="dialog" aria-modal="true" aria-labelledby="polTitle" hidden>
+  <div class="modal-bg" data-close></div>
+  <div class="modal-panel narrow">
+    <button class="icon-btn modal-close" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="policy" id="polBody"></div>
+  </div>
+</div>
+
+<div class="cookie" id="cookie" hidden>
+  <p>Мы используем файлы cookie и локальное хранилище, чтобы запоминать избранное и настройки. <button class="lnk" data-policy="cookies">Подробнее</button></p>
+  <button class="btn btn-primary btn-sm" id="cookieOk">Понятно</button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/app.js" defer></script>
+</body>
+</html>

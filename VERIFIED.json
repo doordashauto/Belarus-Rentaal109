@@ -1,0 +1,39 @@
+{
+  "preparedAt": "2026-11-24",
+  "listings": 16,
+  "realListingsWithPhotos": 16,
+  "commercialListings": 1,
+  "agents": 6,
+  "dataJsonValid": true,
+  "nodeTests": {
+    "nodeVersionUsed": "22.23 (target runtime: 24.13+ <25)",
+    "passed": 15,
+    "failed": 0,
+    "checks": [
+      "data.json validation and readable errors",
+      "static file allowlist, path traversal blocked, strict CSP",
+      "noindex by default, indexing switch, robots and sitemap",
+      "private preview key",
+      "owner and viewing leads saved, idempotent retry, changed retry rejected",
+      "phone, consent, city, deal and origin validation",
+      "lead form disabled until public origin is configured",
+      "rate limit",
+      "admin export requires token",
+      "Telegram notification: failure kept, retried, sent once",
+      "cloud variable validation",
+      "live SQLite backup verified, SHA-256, rotation"
+    ]
+  },
+  "browserCheck": {
+    "desktopAndMobileRendered": true,
+    "contentSecurityPolicyViolations": 0,
+    "viewingRequestSaved": true,
+    "ownerRequestSaved": true,
+    "adminPageListsLeads": true
+  },
+  "telegramMessagesSent": 0,
+  "dockerBuildTested": false,
+  "railwayDeployed": false,
+  "realPhotosIncluded": true,
+  "demoContent": false
+}

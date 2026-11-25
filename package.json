@@ -1,0 +1,16 @@
+{
+  "name": "nbel-railway",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.13.0 <25"
+  },
+  "scripts": {
+    "start": "node cloud.mjs",
+    "dev": "node server.mjs",
+    "bot": "node bot/worker.mjs",
+    "check-data": "node scripts/validate-data.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Заявки — Недвижимость Беларуси</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+<script src="/theme.js"></script>
+</head>
+<body>
+<main class="admin">
+  <h1>Заявки с сайта</h1>
+  <p class="mt10 muted">Ключ доступа — значение переменной NBEL_ADMIN_TOKEN. Он хранится только в этой вкладке и удаляется при её закрытии.</p>
+  <form class="admin-bar" id="authForm">
+    <label>Ключ доступа<input class="inp" id="token" type="password" autocomplete="off" required></label>
+    <label>Тип заявки<select class="inp" id="kind"><option value="">Все</option><option value="viewing">Просмотр объекта</option><option value="owner">Собственник</option></select></label>
+    <button class="btn btn-primary" type="submit">Показать заявки</button>
+    <button class="btn btn-ghost" type="button" id="csvBtn" disabled>Скачать CSV</button>
+    <button class="btn btn-ghost" type="button" id="logout">Выйти</button>
+  </form>
+  <p class="err" id="msg" role="alert"></p>
+  <p class="muted" id="count" aria-live="polite"></p>
+  <div class="tbl-wrap mt16"><table>
+    <thead><tr><th>Дата</th><th>Номер</th><th>Тип</th><th>Имя</th><th>Телефон</th><th>Детали</th><th>Уведомление</th></tr></thead>
+    <tbody id="rows"><tr><td colspan="7" class="muted">Введите ключ доступа, чтобы увидеть заявки.</td></tr></tbody>
+  </table></div>
+</main>
+<script src="/admin.js" defer></script>
+</body>
+</html>
