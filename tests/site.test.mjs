@@ -16,7 +16,7 @@ test('serves the site with strict security headers and blocks private files', as
     for (const p of ['/server.mjs', '/../package.json', '/%2e%2e/server.mjs', '/images/README.md', '/leads.sqlite', '/fonts/../data.json.bak'])
       assert.equal((await fetch(t.base + p)).status, 404, p);
     assert.deepEqual(await (await fetch(`${t.base}/api/health`)).json(), {ok: true});
-    assert.equal((await (await fetch(`${t.base}/api/config`)).json()).bot, 'Rental108_bot');
+    assert.equal((await (await fetch(`${t.base}/api/config`)).json()).bot, 'Rental109_bot');
     assert.match(home.headers.get('content-security-policy'), /script-src 'self' https:\/\/telegram\.org/);
     assert.match(await (await fetch(`${t.base}/robots.txt`)).text(), /Disallow: \//);
   } finally { await t.stop(); }

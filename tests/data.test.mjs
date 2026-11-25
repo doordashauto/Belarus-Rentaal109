@@ -8,7 +8,7 @@ test('data.json holds only the agency\'s own listings and real details', () => {
   assert.ok(d.listings.every(o => o.photos.length >= 3));
   assert.deepEqual(d.listings.filter(o => o.status !== 'withdrawn').map(o => o.id), ['PR-0034']);
   const vyacha = d.listings.find(o => o.id === 'PR-0033'); assert.equal(vyacha.category, 'house'); assert.equal(vyacha.landSotka, 16);
-  assert.equal(d.site.bot, 'Rental108_bot'); assert.equal(d.site.unp, '193630299'); assert.match(d.site.license, /02240\/452/);
+  assert.equal(d.site.bot, 'Rental109_bot'); assert.equal(d.site.unp, '193630299'); assert.match(d.site.license, /02240\/452/);
   assert.equal(d.agents.length, 8); assert.ok(d.agents.every(a => a.team === false));
 });
 
